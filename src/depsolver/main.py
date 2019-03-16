@@ -204,11 +204,11 @@ if __name__ == '__main__':
         solver.add(*additions)
         solver.minimize(cost)
 
-        timeout_ms = 4 * 60 * 1000
+        timeout_ms = 1 * 30 * 1000
         solver.set('timeout', timeout_ms)
         ck = solver.check()
         if ck != sat:
-            raise Exception('unsat')
+            return '[]'
 
         model = solver.model()
         parsed_model = { d.name(): model[d] for d in model if d.name() != 'cost' and '_init' not in d.name()}

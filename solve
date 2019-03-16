@@ -1,3 +1,2 @@
 #!/bin/bash
-python src/depsolver/main.py $@
-# node src/node/index.js $@
+python3 src/depsolver/main.py $@

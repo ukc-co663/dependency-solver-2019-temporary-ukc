@@ -1,5 +1,4 @@
 #!/bin/bash
-rm -rf lib/*
-mkdir -p lib
-wget -O lib/fastjson-1.2.45.jar http://search.maven.org/remotecontent?filepath=com/alibaba/fastjson/1.2.45/fastjson-1.2.45.jar
-
+apt-get update
+apt-get install -y python3-pip
+python3 -m pip install z3-solver packaging
